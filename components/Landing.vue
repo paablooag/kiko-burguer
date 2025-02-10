@@ -2,7 +2,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <section class="landing">
     <div class="content">
-      <video class="background-video" autoplay loop muted ref="video" controls="false">
+      <video class="background-video" autoplay loop muted ref="video">
         <source src="/static/video-kiko-burger.mp4" type="video/mp4" />
       </video>
       <button class="sound-button" @click="toggleSound">
