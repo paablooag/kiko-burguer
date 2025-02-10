@@ -18,6 +18,46 @@
       </div>
     </div>
 
+    <!-- Sección de Quiénes Somos -->
+    <section class="about-us">
+      <div class="about-us-content">
+        <div class="about-us-photo">
+          <img src="/static/quienes-somos.jpg" alt="Equipo Kiko Burger" />
+        </div>
+        <div class="about-us-text">
+          <h2>Quiénes Somos</h2>
+          <p>
+            En Kiko Burger, somos un grupo apasionado por crear las mejores hamburguesas con ingredientes frescos y de alta calidad. Nuestra misión es ofrecerte una experiencia única en cada bocado.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- Sección de Galería -->
+    <section class="gallery">
+      <h2></h2>
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <img src="/static/crispy-chicken.jpg" alt="Crispy Chicken" />
+        </div>
+        <div class="gallery-item">
+          <img src="/static/smash-manos.jpg" alt="Smash Burger" />
+        </div>
+        <div class="gallery-item">
+          <img src="/static/smash-1.jpg" alt="Smash Burger 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="/static/photo-kiko.jpg" alt="Crispy Chicken" />
+        </div>
+        <div class="gallery-item">
+          <img src="/static/combo-kiko.jpg" alt="Smash Burger 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="/static/burger-fondo-kiko.jpg" alt="">
+        </div>
+      </div>
+    </section>
     <!-- Sección de Testimonios -->
     <section class="testimonials">
       <h2>Lo que los <span>KikoLovers</span> dicen de nosotros</h2>
@@ -33,6 +73,7 @@
     </section>
   </section>
 </template>
+
 <script setup>
 import { ref, onMounted } from 'vue';
 
@@ -74,6 +115,7 @@ onMounted(() => {
   }
 });
 </script>
+
 <style scoped>
 /* Font */
 @font-face {
@@ -91,7 +133,7 @@ onMounted(() => {
   background-color: rgba(0, 0, 0, 0.85);
   color: #FFD700;
   padding: 70px 0px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif; /* Fuentes */
 }
 
 .content {
@@ -144,7 +186,6 @@ onMounted(() => {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: 'Poppins', sans-serif;
 }
 
 .cta-button:hover {
@@ -169,6 +210,41 @@ onMounted(() => {
   color: #FFD700;
 }
 
+/* Sección Quiénes Somos */
+.about-us {
+  padding: 50px 10px;
+  text-align: center;
+}
+
+.about-us-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-us-photo img {
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.about-us-text {
+  max-width: 500px;
+}
+
+.about-us h2 {
+  font-size: 36px;
+  color: #FFD700;
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  font-size: 18px;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
 /* Testimonios */
 .testimonials {
   color: white;
@@ -184,7 +260,6 @@ onMounted(() => {
   color: #FFD700;
   font-style: italic;
 }
-
 
 .testimonials-container {
   display: flex;
@@ -219,4 +294,127 @@ onMounted(() => {
   font-weight: bold;
   color: #FFD700;
 }
+
+/* Galería */
+.gallery {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #222;
+  color: #fff;
+}
+
+.gallery h2 {
+  font-size: 36px;
+  color: #FFD700;
+  margin-bottom: 30px;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  width: 25%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;  /* Para centrar las imágenes dentro del contenedor */
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  object-fit: contain; /* Mantiene la proporción y asegura que la imagen no se recorte */
+}
+
+/* Hacemos que la galería no se vea en pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .gallery {
+    display: none; /* Ocultamos la galería en móviles */
+  }
+
+  .text h1 {
+    font-size: 36px;
+  }
+
+  .text p {
+    font-size: 20px;
+  }
+
+  .gallery-item {
+    width: 33%; /* Tres imágenes por fila en tabletas */
+  }
+
+  .testimonial {
+    width: 45%; /* Ajuste para que los testimonios se vean bien en tabletas */
+  }
+}
+
+@media (max-width: 768px) {
+
+  .text h1 {
+    font-size: 32px;
+  }
+
+  .text p {
+    font-size: 18px;
+  }
+
+  .cta-button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .gallery-item {
+    width: 50%; /* Dos imágenes por fila en móviles */
+  }
+
+  .testimonial {
+    width: 90%; /* Testimonios a toda pantalla en móvil */
+  }
+
+  .about-us-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-us-text {
+    max-width: 90%;
+  }
+
+  .sound-button {
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes para pantallas muy pequeñas (móviles pequeños) */
+  .text h1 {
+    font-size: 28px;
+  }
+
+  .text p {
+    font-size: 16px;
+  }
+
+  .gallery-item {
+    width: 100%; /* Una imagen por fila en pantallas pequeñas */
+  }
+
+  .testimonial {
+    width: 100%; /* Testimonios a toda pantalla */
+  }
+
+  .cta-button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+
 </style>
