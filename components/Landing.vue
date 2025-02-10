@@ -2,9 +2,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <section class="landing">
     <div class="content">
-      <video class="background-video" autoplay loop muted ref="video">
+      <video class="background-video" autoplay loop muted ref="video" controls="false">
         <source src="/static/video-kiko-burger.mp4" type="video/mp4" />
-        Tu navegador no soporta la reproducción de videos.
       </video>
       <button class="sound-button" @click="toggleSound">
         <i :class="isMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up'"></i>
@@ -155,7 +154,9 @@ onMounted(() => {
   object-fit: cover;
   z-index: 0;
   opacity: 0.25 !important;
+  pointer-events: none; /* Esto desactiva la interacción del video */
 }
+
 
 .text {
   z-index: 1;
