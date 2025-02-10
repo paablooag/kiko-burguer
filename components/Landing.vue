@@ -5,9 +5,9 @@
       <video class="background-video" autoplay loop muted ref="video">
         <source src="/static/video-kiko-burger.mp4" type="video/mp4" />
       </video>
-      <button class="sound-button" @click="toggleSound">
+      <!-- <button class="sound-button" @click="toggleSound">
         <i :class="isMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up'"></i>
-      </button>
+      </button> -->
       <div class="text">
         <h1>¡Bienvenido a Kiko Burger!</h1>
         <p>
