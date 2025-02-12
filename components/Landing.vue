@@ -32,6 +32,29 @@
         </div>
       </section>
 
+      <section class="order-online">
+  <h2>¿Quieres pedir en Kiko?</h2>
+  <p>Haz tu pedido a domicilio a través de las siguientes plataformas:</p>
+  <div class="order-links">
+    <div class="order-item">
+      <a href="https://glovoapp.com/es/" target="_blank" class="order-link glovo">
+        <img src="/static/glovo.png" alt="Glovo">
+      </a>
+    </div>
+    <div class="order-item">
+      <a href="https://www.uber-eats.es/" target="_blank" class="order-link ubereats">
+        <img src="/static/uber-eats.png" alt="Just Eat">
+      </a>
+    </div>
+    <div class="order-item">
+      <a href="https://www.just-eat.es/" target="_blank" class="order-link justeat">
+        <img src="/static/just-eat.png" alt="Just Eat">
+      </a>
+    </div>
+  </div>
+</section>
+
+
       
       <!-- Sección de Galería -->
       <section class="gallery">
@@ -57,6 +80,7 @@
           </div>
         </div>
       </section>
+
       <!-- Sección de Testimonios -->
       <section class="testimonials">
         <h2>Lo que los <span>KikoLovers</span> dicen de nosotros</h2>
@@ -68,6 +92,18 @@
             </div>
             <span class="author">- {{ review.author }}</span>
           </div>
+        </div>
+      </section>
+      <!-- Sección de Redes Sociales -->
+      <section class="social-media">
+        <h2>Síguenos en Redes Sociales</h2>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/kikoundefiledburger" target="_blank" class="social-link instagram">
+            <i class="fab fa-instagram"></i> @kikoundefiledburger
+          </a>
+          <a href="https://www.tiktok.com/@kikoundefiledburger" target="_blank" class="social-link tiktok">
+            <i class="fab fa-tiktok"></i> @kikoundefiledburger
+          </a>
         </div>
       </section>
     </section>
@@ -332,8 +368,123 @@
     object-fit: contain; /* Mantiene la proporción y asegura que la imagen no se recorte */
   }
 
+  .social-media {
+  text-align: center;
+  padding: 50px 0px; 
+  color: white;
+  background-color: #222;
+  width: 100%;
+}
+
+.social-media h2 {
+  font-size: 32px;
+  color: #FFD700;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.social-link i {
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+/* Instagram */
+.instagram {
+  background-color: #E1306C;
+}
+
+.instagram:hover {
+  background-color: #C13584;
+}
+
+/* TikTok */
+.tiktok {
+  background-color: #000;
+  border: 2px solid white;
+}
+
+.tiktok:hover {
+  background-color: #333;
+}
+
+/* Sección de pedidos */
+.order-online {
+  padding: 40px 20px;
+  text-align: center;
+  color: #FFD700; /* Texto en amarillo */
+}
+
+.order-online h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.order-online p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+/* Contenedor de enlaces de pedidos */
+.order-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center; /* Alinea los logos a la misma altura */
+}
+
+/* Elemento individual de pedido */
+.order-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Enlace de pedido */
+.order-link {
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 120px; /* Tamaño adecuado para los logos */
+}
+
+.order-item img {
+  width: 100%; /* Ajusta la imagen al contenedor */
+  height: auto; /* Mantiene la proporción */
+}
+
+.order-text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
   /* Hacemos que la galería no se vea en pantallas pequeñas (móviles) */
   @media (max-width: 768px) {
+    .order-links {
+    gap: 20px; /* Reduce el espacio entre las imágenes en pantallas más pequeñas */
+  }
+
+  .order-item img {
+    width: 60%; /* Ajusta la imagen al contenedor */
+    height: auto; /* Mantiene la proporción */
+  }
     .gallery {
       display: none; /* Ocultamos la galería en móviles */
     }

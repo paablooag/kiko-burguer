@@ -3,36 +3,31 @@
     <img src="/static/kiko-logo.png" alt="Logo" class="logo">
     <input class="hidden" id="drawer-input" type="checkbox">
     <label for="drawer-input" class="drawer-open">
-        <span></span>
+      <span></span>
     </label>
     <nav class="nav-content">
-        <ul class="items">
+      <ul class="items">
         <li class="item">
-            <a href="#" target="_blank">
+          <a href="#" target="_blank">
             <p>Carta</p>
-            </a>
+          </a>
         </li>
-        <!-- <li class="item">
-            <a href="#" target="_blank">
-            <p>Galeria</p>
-            </a>
-        </li> -->
         <li class="item">
-            <a href="#" target="_blank">
+          <a href="#" target="_blank">
             <p>Ubicación</p>
-            </a>
+          </a>
         </li>
         <li class="item">
-            <a href="#" target="_blank">
+          <a href="#" target="_blank">
             <p>Sobre nosotros</p>
-            </a>
+          </a>
         </li>
         <li class="item">
           <a href="#" target="_blank">
             <p>Redes sociales</p>
           </a>
         </li>
-        </ul>
+      </ul>
     </nav>
   </div>
 </template>
@@ -56,36 +51,33 @@
   display: none;
 }
 
-/* Haciendo que el header esté fijo en la parte superior */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed; /* Fijamos el header en la parte superior */
-  top: 0; /* Arriba */
-  left: 0; /* Alineado a la izquierda */
-  width: 100%; /* Ancho completo */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 75px;
-  z-index: 1000; /* Asegura que el header esté sobre otros elementos */
-  background-color: rgba(118, 118, 118, 0.85); /* Fondo oscuro */
-  box-shadow: 0 2px 10px rgba(14, 14, 14, 0.3); /* Sombras suaves */
+  z-index: 1000;
+  background-color: rgba(118, 118, 118, 0.85);
+  box-shadow: 0 2px 10px rgba(14, 14, 14, 0.3);
 }
 
-/* Estilos para la imagen del logo */
 .logo {
   height: 80px;
   width: auto;
   margin-left: 5%;
 }
 
-/* Estilos del menú */
 .drawer-open {
   width: 50px;
-  height: 75px;
+  height: 50px;
   position: relative;
   cursor: pointer;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-right: 5%;
 }
@@ -96,38 +88,35 @@
   content: '';
   height: 2.5px;
   width: 25px;
-  background-color: #FFD700; /* Amarillo */
-  transition: 400ms 350ms;
+  background-color: #FFD700;
+  transition: 400ms ease-in-out;
   position: absolute;
 }
 
 .drawer-open span:before {
-  bottom: 8px;
+  top: -8px;
 }
 
 .drawer-open span:after {
-  top: 8px;
+  bottom: -8px;
 }
 
 #drawer-input:checked ~ .drawer-open span {
-  width: 0px;
-  transition: 100ms;
+  background-color: transparent;
 }
 
 #drawer-input:checked ~ .drawer-open span::before {
-  bottom: 0;
-  transition: all 400ms 100ms cubic-bezier(.10,.0,.85,.0);
   transform: rotate(45deg);
+  top: 0;
 }
 
 #drawer-input:checked ~ .drawer-open span::after {
-  top: 0;
-  transition: all 400ms 100ms cubic-bezier(.10,.0,.85,.0);
   transform: rotate(-45deg);
+  bottom: 0;
 }
 
 #drawer-input:checked ~ .nav-content {
-  transition: all 500ms cubic-bezier(.10,.0,.80,.0);
+  transition: all 500ms cubic-bezier(.10, .0, .80, .0);
   height: calc(30vh - 30px);
 }
 
@@ -143,13 +132,13 @@
 .nav-content {
   position: fixed;
   height: 75px;
-  width: 100vw; /* Ocupar todo el ancho de la pantalla */
+  width: 100vw;
   left: 0;
   top: 0;
   margin: 0;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  box-shadow: 0 2px 10px 0 rgba(3,3,3,0.3);
+  box-shadow: 0 2px 10px 0 rgba(3, 3, 3, 0.3);
   min-width: 300px;
   transition: 400ms 350ms;
   z-index: -1;
@@ -157,7 +146,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro */
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 .nav-content .items {
@@ -165,7 +154,6 @@
   transition: 350ms;
   margin-top: 75px;
   padding-inline-start: 0px;
-  background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro */
 }
 
 .items {
@@ -177,28 +165,39 @@
 .item {
   list-style: none;
   margin-right: 20px;
-  border-bottom: solid 2px #FFD700; /* Amarillo */
-}
-
-.item:first-child {
-  border-top: solid 2px #FFD700; /* Amarillo */
 }
 
 .item a {
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: none !important;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Cambié esto de space-between a center */
+  align-items: center; /* Añadí esto para centrar el texto verticalmente */
+  height: 100%; /* Asegura que el enlace ocupe todo el alto del contenedor */
 }
 
 .item a p {
-  margin-top: 2.5px;
+  margin-top: 10px; /* Elimina el margen superior para evitar desplazamiento */
   transition: 150ms;
-  color: #FFD700; /* Amarillo */
+  color: #FFD700;
+  text-align: center; /* Asegura que el texto esté centrado dentro del contenedor */
+  font-size: 30px;
+
 }
 
+.items {
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos se apilen en una columna */
+  width: 100%;
+  min-width: 300px;
+  margin: 0 15px 0;
+  justify-content: center; /* Centra los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+}
+
+
 .item:hover a p {
-  color: #cbad00; /* Azul suave */
+  color: #cbad00;
 }
 
 p {
@@ -210,8 +209,20 @@ p {
     font-size: 25px;
   }
   #drawer-input:checked ~ .nav-content {
-    transition: all 500ms cubic-bezier(.10,.0,.80,.0);
+    transition: all 500ms cubic-bezier(.10, .0, .80, .0);
     height: calc(40vh - 30px);
   }
+  
+}
+@media (max-width: 768px) {
+  .item a p {
+  margin-top: 10px; /* Elimina el margen superior para evitar desplazamiento */
+  transition: 150ms;
+  color: #FFD700;
+  text-align: center; /* Asegura que el texto esté centrado dentro del contenedor */
+  font-size: 12px;
+
+}
+  
 }
 </style>
