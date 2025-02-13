@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="header">
     <img src="/static/kiko-logo.png" alt="Logo" class="logo">
     <input class="hidden" id="drawer-input" type="checkbox">
@@ -37,13 +37,20 @@
   font-family: 'satoshi';
   src: url('https://dl.dropbox.com/scl/fi/cw88jfat68bv2786p2h2w/Satoshi-Regular.woff?rlkey=om4imghk314fc5ioiusz5qo6s&dl=0') format('woff');
 }
+  /* Font */
+  @font-face {
+    font-family: 'Poppins';
+    src: url('https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
 
 * {
   color: #303336;
   line-height: 1.0;
   -webkit-user-select: none;
   user-select: none;
-  font-family: 'satoshi';
+  font-family: 'Poppins', sans-serif; /* Fuentes */
   z-index: 10;
 }
 
@@ -177,11 +184,11 @@
 }
 
 .item a p {
-  margin-top: 10px; /* Elimina el margen superior para evitar desplazamiento */
+  margin-top: 12px; /* Elimina el margen superior para evitar desplazamiento */
   transition: 150ms;
   color: #FFD700;
   text-align: center; /* Asegura que el texto esté centrado dentro del contenedor */
-  font-size: 30px;
+  font-size: 25px;
 
 }
 
@@ -220,9 +227,59 @@ p {
   transition: 150ms;
   color: #FFD700;
   text-align: center; /* Asegura que el texto esté centrado dentro del contenedor */
-  font-size: 12px;
+  font-size: 18px;
 
 }
+#drawer-input:checked ~ .nav-content {
+  transition: all 500ms cubic-bezier(.10, .0, .80, .0);
+  height: calc(40vh - 30px);
+}
   
+}
+</style> -->
+<template>
+  <div class="header">
+    <a href="/"><img src="/static/kiko-logo.png" alt="Logo" class="logo"></a>
+  </div>
+</template>
+
+<style scoped>
+@font-face {
+  font-family: 'satoshi';
+  src: url('https://dl.dropbox.com/scl/fi/cw88jfat68bv2786p2h2w/Satoshi-Regular.woff?rlkey=om4imghk314fc5ioiusz5qo6s&dl=0') format('woff');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  color: #303336;
+  line-height: 1.0;
+  user-select: none;
+  font-family: 'Poppins', sans-serif;
+  z-index: 10;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85px;
+  z-index: 1000;
+  background-color: #111111;
+  box-shadow: 0 2px 10px rgba(14, 14, 14, 0.3);
+}
+
+.logo {
+  height: 75px;
+  width: auto;
 }
 </style>

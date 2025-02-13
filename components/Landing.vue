@@ -110,6 +110,15 @@
   </template>
 
   <script setup>
+  useHead({
+  title: 'Kiko Undefiled Burguer | Granada',
+  meta: [
+    { name: 'description', content: 'Kiko Undefiled Burguer es tu local de hamburguesas con productos frescos y seleccionados especialmente para ti. En el centro de Granada, Kiko Undefiled Burguer ofrece una experiencia única y agradable para disfrutar de nuestras hamburguesas gourmet.' },
+    { name: 'author', content: 'Kiko Undefined Burguer' },
+    { name: 'robots', content: 'index, follow' },
+    { name: 'keywords', content: 'burguer, hamburguesa, kiko, kiko burguer, hamburguesas gourmet, comida rápida Granada' },
+  ],
+});
   import { ref, onMounted } from 'vue';
 
   // Referencia al video y estado del mute
@@ -223,6 +232,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
   }
 
   .cta-button:hover {
@@ -427,7 +437,6 @@
 
 /* Sección de pedidos */
 .order-online {
-  padding: 40px 20px;
   text-align: center;
   color: #FFD700; /* Texto en amarillo */
 }
@@ -441,6 +450,7 @@
   font-size: 18px;
   margin-bottom: 30px;
   color: white;
+  padding: 20px 40px;
 }
 
 /* Contenedor de enlaces de pedidos */
@@ -571,6 +581,14 @@
       right: 10px;
       font-size: 20px;
     }
+    .order-online {
+      background-color: #222;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-left: -4px;
+}
   }
 
   @media (max-width: 480px) {

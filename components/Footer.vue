@@ -3,7 +3,7 @@
       <div class="footer-content">
         <div class="logo-column">
           <!-- Aquí se reemplaza el SVG por la imagen del logo -->
-          <img class="footer-logo" src="/static/kiko-logo2.png" alt="Kiko Undefined Burguer Logo" />
+          <a href="/"><img class="footer-logo" src="/static/kiko-logo2.png" alt="Kiko Undefined Burguer Logo"  /></a>
         </div>
   
         <div class="footer-info second-column">
@@ -12,14 +12,14 @@
             Calle nueva San Anton<br />
             Granada Centro, Granada, España
           </p>
-          <p class="footer-business-phone">Contacto: 687 361 991</p>
+          <p class="footer-business-phone">Contacto:  629 15 33 56</p>
         </div>
   
         <nav class="footer-nav third-column">
           <ul>
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Carta</a></li>
-            <li><a href="">Contacto</a></li>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/carta">Carta</a></li>
+            <!-- <li><a href="">Contacto</a></li> -->
           </ul>
         </nav>
       </div>
