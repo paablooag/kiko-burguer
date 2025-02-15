@@ -9,8 +9,8 @@
         <div class="footer-info second-column">
           <h2 class="footer-business-name">Kiko Undefiled Burguer</h2>
           <p class="footer-business-address">
-            Calle nueva San Anton<br />
-            Granada Centro, Granada, España
+            C. Nueva San Anton, 16<br />
+            Granada Centro, 18005, Granada
           </p>
           <p class="footer-business-phone">Contacto:  629 15 33 56</p>
         </div>

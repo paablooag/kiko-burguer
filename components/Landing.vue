@@ -266,6 +266,8 @@
   .about-us {
     padding: 50px 10px;
     text-align: center;
+    background-color: #222;
+    width: 100%;
   }
 
   .about-us-content {
@@ -444,6 +446,8 @@
 .order-online {
   text-align: center;
   color: #FFD700; /* Texto en amarillo */
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 
 .order-online h2 {
@@ -571,7 +575,9 @@
     .testimonial {
       width: 90%; /* Testimonios a toda pantalla en móvil */
     }
-
+    .about-us {
+      background-color: #333;
+    }
     .about-us-content {
       flex-direction: column;
       align-items: center;
