@@ -13,7 +13,7 @@
           <p>
             Disfruta de nuestras smash burguers, hechas con ingredientes frescos y seleccionados especialmente para ti. <br>¿Estás listo para probarnos?
           </p>
-          <button class="cta-button">Ver Carta</button>
+          <button class="cta-button"> <a href="/carta">Ver Carta</a></button>
         </div>
       </div>
 
@@ -237,6 +237,11 @@
 
   .cta-button:hover {
     background-color: #ffca00;
+  }
+
+  .cta-button a {
+    text-decoration: none;
+    color: #222;
   }
 
   .sound-button {
