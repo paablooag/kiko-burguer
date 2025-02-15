@@ -472,7 +472,7 @@
 .order-link {
   display: inline-block;
   margin-bottom: 10px;
-  width: 120px; /* Tamaño adecuado para los logos */
+  width: 110px; /* Tamaño adecuado para los logos */
 }
 
 .order-item img {
