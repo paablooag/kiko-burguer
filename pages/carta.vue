@@ -2,7 +2,7 @@
   <Header />
   <div class="menu-container">
     <div class="top-row">
-      <h1 class="menu-title">MENÚ K</h1>
+      <!-- <h1 class="menu-title">MENÚ K</h1> -->
     </div>
 
     <div class="combo-switch">
@@ -198,7 +198,8 @@ const products = {
   align-items: center;
   gap: 0.5rem;
   justify-content: center;
-  margin: 1.5rem 0 2rem;
+  margin-top: 8%
+
 }
 .switch {
   position: relative;
@@ -354,6 +355,7 @@ input:checked + .slider:before {
   }
   .combo-switch {
     flex-direction: column;
+    margin-top: 20%
   }
   .drinks-container {
     flex-direction: column;
