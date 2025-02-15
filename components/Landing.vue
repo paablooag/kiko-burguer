@@ -267,7 +267,7 @@
     padding: 50px 10px;
     text-align: center;
     background-color: #222;
-    width: 100%;
+    width: 98%;
   }
 
   .about-us-content {
@@ -577,6 +577,8 @@
     }
     .about-us {
       background-color: #333;
+      width: 95%;
+
     }
     .about-us-content {
       flex-direction: column;
