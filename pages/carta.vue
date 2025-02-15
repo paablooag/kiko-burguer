@@ -29,7 +29,7 @@
       <div class="drinks-container">
         <div class="drinks-block">
           <ul>
-            <li v-for="drink in products.drinks.slice(0, 4)" :key="drink.name">
+            <li v-for="drink in products.drinks.slice(0, 6)" :key="drink.name">
               <div class="burger-item">
                 <h2>{{ drink.name }}</h2>
                 <span class="price-circle">{{ drink.price }}</span>
@@ -37,9 +37,9 @@
             </li>
           </ul>
         </div>
-        <div class="drinks-block">
+        <div class="drinks-block drinks-block-2">
           <ul>
-            <li v-for="drink in products.drinks.slice(4)" :key="drink.name">
+            <li v-for="drink in products.drinks.slice(6)" :key="drink.name">
               <div class="burger-item">
                 <h2>{{ drink.name }}</h2>
                 <span class="price-circle">{{ drink.price }}</span>
@@ -118,39 +118,44 @@ useHead({
 const products = {
   combos: [
     { name: "COMBO CHEESEBURGER", price: "8,90€" },
-    { name: "COMBO DOUBLE DOUBLE", price: "11,50€" },
+    { name: "COMBO DOUBLE DOUBLE", price: "11,90€" },
     { name: "COMBO BACON CHEESEBURGER", price: "9,90€" },
     { name: "COMBO LTC", price: "9,90€" },
-    { name: "COMBO CRISPY CHICKEN", price: "9,90€" },
-    { name: "COMBO VEGAN BURGER", price: "9,90€" },
+    { name: "COMBO CRISPY CHICKEN", price: "8,90€" },
+    { name: "COMBO VEGAN BURGER", price: "10,90€" },
   ],
   drinks: [
     { name: "Agua 1L", price: "1,20€" },
-    { name: "Coca Cola", price: "1,80€" },
-    { name: "Fanta Naranja", price: "1,80€" },
-    { name: "Fanta Limón", price: "1,80€" },
+    { name: "Aga con gas", price: "1,40€" },
+    { name: "Aquarius", price: "1,70€" },
+    { name: "Nestea", price: "1,70€" },
+    { name: "Coca Cola", price: "1,70€" },
+    { name: "Sprite", price: "1,70€" },
+    { name: "Fanta Naranja", price: "1,70€" },
+    { name: "Fanta Limón", price: "1,70€" },
     { name: "Cerveza Alhambra 33cl", price: "1,90€" },
     { name: "Cerveza Sin Alcohol 33cl", price: "1,90€" },
-    { name: "Zumo de naranja", price: "1,80€" },
+    { name: "Zumo de naranja", price: "2,50€" },
     { name: "Zumo de melocotón/piña", price: "1,80€" },
   ],
   burgers: [
-    { name: "Cheeseburger", price: "9,00€", description: "Carne 90gr, Queso Cheddar, Mostaza, Ketchup, Cebolla" },
-    { name: "Double Double", price: "11,50€", description: "Carne 90gr x2, Cheddar x2, Bacon" },
-    { name: "Bacon Cheeseburger", price: "9,90€", description: "Carne 90gr, Cheddar, Bacon" },
-    { name: "LTC", price: "9,90€", description: "Carne 90gr, Cheddar, Lechuga, Tomate, Cebolla, Mostaza" },
-    { name: "Crispy Chicken", price: "9,90€", description: "Pollo Crispy, Cheddar, Lechuga, Tomate, Mayonesa" },
-    { name: "Vegan Burger", price: "9,90€", description: "Pan Vegano, Medallón No Carne, Lechuga, Tomate, Guacamole" },
+    { name: "Cheeseburger", price: "4,99€", description: "Carne 90gr, Queso Cheddar, Mostaza, Ketchup, Cebolla" },
+    { name: "Double Double", price: "7,99€", description: "Carne 90gr x2, Cheddar x2" },
+    { name: "Bacon Cheeseburger", price: "6,99€", description: "Carne 90gr, Cheddar, Bacon" },
+    { name: "LTC", price: "6,99€", description: "Carne 90gr, Cheddar, Lechuga, Tomate, Cebolla, Mostaza, Ketchup" },
+    { name: "Crispy Chicken", price: "6,99€", description: "Pollo Crispy, Cheddar, Lechuga, Tomate, Mayonesa" },
+    { name: "Vegan Burger", price: "7,99€", description: "Pan Vegano, Medallón No Carne, Lechuga, Tomate, Guacamole" },
   ],
   sides: [
     { name: "Patatas Fritas", price: "3,00€" },
     { name: "Boniato Frito", price: "3,50€" },
-    { name: "Nuggets de Pollo 6u.", price: "4,00€" },
+    { name: "Nuggets de Pollo 6u.", price: "3,99€" },
     { name: "Nuggets de Pollo 12u.", price: "5,50€" },
   ],
   extras: [
     { name: "Extra Cheddar", price: "+0,80€" },
-    { name: "Extra Bacon", price: "+1,00€" },
+    { name: "Extra Bacon", price: "+0,90€" },
+    { name: "Extra Carne", price: "+1,99€" },
   ],
 }
 </script>
@@ -271,7 +276,7 @@ input:checked + .slider:before {
   border: 2px solid #FFD700;
   border-radius: 50px;
   color: rgb(220, 220, 220);
-  width: 100px;
+  width: 80px;
   height: 40px;
   display: flex;
   align-items: center;
@@ -373,6 +378,9 @@ input:checked + .slider:before {
   /* Reduce aún más la descripción del producto en móvil */
   .burgers p {
     font-size: 0.8rem;
+  }
+  .drinks-block-2 {
+    margin-top: -20px;
   }
 }
 </style>
