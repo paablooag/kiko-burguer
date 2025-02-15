@@ -60,22 +60,22 @@
       <section class="gallery">
         <h2></h2>
         <div class="gallery-container">
-          <div class="gallery-item">
+          <div class="gallery-item gallery-item-1">
             <img src="/static/crispy-chicken.jpg" alt="Crispy Chicken" />
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item gallery-item-2">
             <img src="/static/smash-manos.jpg" alt="Smash Burger" />
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item gallery-item-3">
             <img src="/static/smash-1.jpg" alt="Smash Burger 1" />
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item gallery-item-4">
             <img src="/static/photo-kiko.jpg" alt="Crispy Chicken" />
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item gallery-item-5">
             <img src="/static/combo-kiko.jpg" alt="Smash Burger 1" />
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item gallery-item-6">
             <img src="/static/burger-fondo-kiko.jpg" alt="">
           </div>
         </div>
@@ -504,9 +504,9 @@
     width: 60%; /* Ajusta la imagen al contenedor */
     height: auto; /* Mantiene la proporción */
   }
-    .gallery {
-      display: none; /* Ocultamos la galería en móviles */
-    }
+    /* .gallery {
+      display: none; 
+    } */
 
     .text h1 {
       font-size: 36px;
@@ -518,6 +518,9 @@
 
     .gallery-item {
       width: 33%; /* Tres imágenes por fila en tabletas */
+    }
+    .gallery-item-1, .gallery-item-4, .gallery-item-5 {
+      display: none;
     }
 
     .testimonial {
@@ -576,7 +579,7 @@
       width: 90%; /* Testimonios a toda pantalla en móvil */
     }
     .about-us {
-      background-color: #333;
+      background-color: rgba(34, 34, 34, 0.855);
       width: 95%;
 
     }
