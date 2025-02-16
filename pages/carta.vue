@@ -126,7 +126,7 @@ const products = {
   ],
   drinks: [
     { name: "Agua 1L", price: "1,20€" },
-    { name: "Aga con gas", price: "1,40€" },
+    { name: "Agua con gas", price: "1,40€" },
     { name: "Aquarius", price: "1,70€" },
     { name: "Nestea", price: "1,70€" },
     { name: "Coca Cola", price: "1,70€" },
