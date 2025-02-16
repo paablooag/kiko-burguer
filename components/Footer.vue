@@ -7,7 +7,7 @@
         </div>
   
         <div class="footer-info second-column">
-          <h2 class="footer-business-name">Kiko Undefiled Burguer</h2>
+          <h2 class="footer-business-name">Kiko Undefiled Burger</h2>
           <p class="footer-business-address">
             C. Nueva San Anton, 16<br />
             Granada Centro, 18005, Granada
