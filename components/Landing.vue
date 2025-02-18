@@ -11,7 +11,7 @@
         <div class="text">
           <h1>¡Bienvenido a Kiko Burger!</h1>
           <p>
-            Disfruta de nuestras smash burguers, hechas con ingredientes frescos y seleccionados especialmente para ti. <br>¿Estás listo para probarnos?
+            Disfruta de nuestras smash burgers, hechas con ingredientes frescos y seleccionados especialmente para ti. <br>¿Estás listo para probarnos?
           </p>
           <button class="cta-button"> <a href="/carta">Ver Carta</a></button>
         </div>
@@ -111,12 +111,12 @@
 
   <script setup>
   useHead({
-  title: 'Kiko Undefiled Burguer | Granada',
+  title: 'Kiko Undefiled Burger | Granada',
   meta: [
-    { name: 'description', content: 'Kiko Undefiled Burguer es tu local de hamburguesas con productos frescos y seleccionados especialmente para ti. En el centro de Granada, Kiko Undefiled Burguer ofrece una experiencia única y agradable para disfrutar de nuestras hamburguesas gourmet.' },
-    { name: 'author', content: 'Kiko Undefined Burguer' },
+    { name: 'description', content: 'Kiko Undefiled Burger es tu local de hamburguesas con productos frescos y seleccionados especialmente para ti. En el centro de Granada, Kiko Undefiled Burger ofrece una experiencia única y agradable para disfrutar de nuestras hamburguesas gourmet.' },
+    { name: 'author', content: 'Kiko Undefined Burger' },
     { name: 'robots', content: 'index, follow' },
-    { name: 'keywords', content: 'burguer, hamburguesa, kiko, kiko burguer, hamburguesas gourmet, comida rápida Granada' },
+    { name: 'keywords', content: 'burger, hamburguesa, kiko, kiko burger, hamburguesas gourmet, comida rápida Granada' },
   ],
 });
   import { ref, onMounted } from 'vue';

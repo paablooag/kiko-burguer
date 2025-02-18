@@ -58,12 +58,12 @@ const goHome = () => {
 };
 
 useHead({
-  title: 'Error 404 | Kiko Undefiled Burguer',
+  title: 'Error 404 | Kiko Undefiled Burger',
   meta: [
-    { name: 'description', content: 'Error 404 en Kiko Undefiled Burguer. La página que buscabas no existe, pero... ¿pedimos kiko?' },
-    { name: 'author', content: 'Kiko Undefined Burguer' },
+    { name: 'description', content: 'Error 404 en Kiko Undefiled Burger. La página que buscabas no existe, pero... ¿pedimos kiko?' },
+    { name: 'author', content: 'Kiko Undefined Burger' },
     { name: 'robots', content: 'index, follow' },
-    { name: 'keywords', content: 'burguer, hamburguesa, kiko, kiko burguer, hamburguesas gourmet, comida rápida Granada' },
+    { name: 'keywords', content: 'burger, hamburguesa, kiko, kiko burger, hamburguesas gourmet, comida rápida Granada' },
   ],
 });
 </script>

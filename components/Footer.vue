@@ -3,7 +3,7 @@
       <div class="footer-content">
         <div class="logo-column">
           <!-- Aquí se reemplaza el SVG por la imagen del logo -->
-          <a href="/"><img class="footer-logo" src="/static/kiko-logo2.png" alt="Kiko Undefined Burguer Logo"  /></a>
+          <a href="/"><img class="footer-logo" src="/static/kiko-logo2.png" alt="Kiko Undefined Burger Logo"  /></a>
         </div>
   
         <div class="footer-info second-column">

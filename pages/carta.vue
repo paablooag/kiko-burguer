@@ -105,12 +105,12 @@ const showCombos = ref(false)
 
 
 useHead({
-  title: 'Kiko Undefiled Burguer | Carta',
+  title: 'Kiko Undefiled Burger | Carta',
   meta: [
-    { name: 'description', content: 'Descubre la carta de las mejores smash burguers de Kiko Undefiled Burguer. Con nuestra selección de hamburguesas frescas y gourmet, disfruta de una deliciosa comida rápida y una experiencia única.' },
-    { name: 'author', content: 'Kiko Undefined Burguer' },
+    { name: 'description', content: 'Descubre la carta de las mejores smash burgers de Kiko Undefiled Burger. Con nuestra selección de hamburguesas frescas y gourmet, disfruta de una deliciosa comida rápida y una experiencia única.' },
+    { name: 'author', content: 'Kiko Undefined Burger' },
     { name: 'robots', content: 'index, follow' },
-    { name: 'keywords', content: 'burger, hamburguesa, kiko, kiko burguer, hamburguesas gourmet, comida rápida Granada' },
+    { name: 'keywords', content: 'burger, hamburguesa, kiko, kiko burger, hamburguesas gourmet, comida rápida Granada' },
   ],
 });
 
