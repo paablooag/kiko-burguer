@@ -42,7 +42,7 @@
     </svg>
     <div class="error-message">
       <p>La página que buscabas no existe, pero... ¿pedimos kiko?</p>
-      <button @click="goHome">¡Púlsame!</button>
+      <button @click="goHome">¡Mira mi carta!</button>
     </div>
   </div>
   <Footer/>
@@ -54,7 +54,7 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 
 const goHome = () => {
-  router.push('/'); // Redirige al inicio
+  router.push('/carta'); // Redirige al inicio
 };
 
 useHead({
