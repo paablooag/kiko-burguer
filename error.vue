@@ -66,9 +66,17 @@ useHead({
     { name: 'keywords', content: 'burger, hamburguesa, kiko, kiko burger, hamburguesas gourmet, comida rápida Granada' },
   ],
 });
-
 </script>
-
+<script>
+defineNuxtComponent({
+  props: {
+    error: {
+      type: Object,
+      required: true
+    }
+  }
+})
+</script>
 <style scoped>
 @font-face {
   font-family: 'Poppins';
