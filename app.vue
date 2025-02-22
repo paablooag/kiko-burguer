@@ -1,14 +1,17 @@
 <template>
   <div>
     <!-- <Header /> -->
-    
-    <NuxtErrorBoundary>
-      <template #error="{ error }">
-        <Error :error="error" />  <!-- Muestra tu página personalizada de error -->
-      </template>
-      <NuxtPage />  <!-- Renderiza las páginas normales -->
-    </NuxtErrorBoundary>
-
+    <NuxtPage />  <!-- Renderiza dinámicamente cada página -->
     <!-- <Footer /> -->
   </div>
 </template>
+
+<script setup>
+
+</script>
+
+<style>
+* {
+  margin: 0;
+}
+</style>
