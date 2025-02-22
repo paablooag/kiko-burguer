@@ -66,6 +66,7 @@ useHead({
     { name: 'keywords', content: 'burger, hamburguesa, kiko, kiko burger, hamburguesas gourmet, comida rápida Granada' },
   ],
 });
+
 </script>
 
 <style scoped>

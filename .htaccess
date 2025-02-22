@@ -1,0 +1,8 @@
+# Redirigir todas las rutas no definidas a index.html
+RewriteEngine On
+RewriteBase /
+
+# Asegurarse de que las rutas sin archivos específicos apunten a index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.html [L]
