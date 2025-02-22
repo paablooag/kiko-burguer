@@ -22,3 +22,30 @@ jobs:
           script: |
             echo "Accediendo a repo"
             ls
+      
+      - name: Download changes
+        id: download_changes
+  
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: "access-5017241429.webspace-host.com"
+          username: "a875422"
+          password: "calahonda592"
+          port: 22
+          script: |
+            cd kiko-burguer/
+            git fetch
+            git pull
+
+      - name: Reload with changes
+        id: reload_changes
+  
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: "access-5017241429.webspace-host.com"
+          username: "a875422"
+          password: "calahonda592"
+          port: 22
+          script: |
+            cd kiko-burguer/
+            npm run dev
