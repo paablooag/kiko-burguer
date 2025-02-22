@@ -6,7 +6,7 @@
     </div>
 
     <div class="combo-switch">
-      <span class="combo-text">{{ showCombos ? 'Ver opción sin combo' : 'Ver opción combo' }}</span>
+      <span class="combo-text">{{ showCombos ? 'Ver opción sin combo' : 'Ver opción combo combo' }}</span>
       <label class="switch">
         <input type="checkbox" v-model="showCombos" />
         <span class="slider"></span>
