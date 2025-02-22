@@ -1,9 +1,0 @@
-name: my-nuxt-app
-build:
-  command: npm run generate
-  distFolder: .output/public
-hosting:
-  rewriteRules:
-    - source: "/*"
-      destination: "/404.html"
-      statusCode: 404
