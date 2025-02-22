@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     },
   },
 
-  ssr: false, // Asegúrate de que SSR está habilitado si estás usando SSR
+  ssr: true, // Asegúrate de que SSR está habilitado si estás usando SSR
 
   compatibilityDate: '2025-02-13',
 })
