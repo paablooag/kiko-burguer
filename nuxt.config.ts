@@ -13,10 +13,4 @@ export default defineNuxtConfig({
   ssr: true, // Asegúrate de que SSR está habilitado si estás usando SSR
   devtools: { enabled: true },
   compatibilityDate: '2025-02-13',
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      routes: ['/404'] // Forza el pre-renderizado de la página 404
-    }
-  }
 })
