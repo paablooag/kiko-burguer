@@ -10,13 +10,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up SSH connection
-        run: |
-          mkdir -p ~/.ssh
-          echo "calahonda592" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H access-5017241429.webspace-host.com >> ~/.ssh/known_hosts
-
-      - name: Connect via SSH and execute commands
-        run: |
-          ssh a875422@access-5017241429.webspace-host.com "echo 'Conexión SSH exitosa' && ls -la"
+      - name: Try connect ssh
+        id: reload_server
+  
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: "access-5017241429.webspace-host.com"
+          username: "a875422"
+          password: "calahonda592"
+          port: 22
+          script: |
+            echo "Accediendo a repo"
+            ls
