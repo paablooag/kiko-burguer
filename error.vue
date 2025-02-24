@@ -54,7 +54,7 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 
 const goHome = () => {
-  router.push('/carta'); // Redirige al inicio
+  router.push('/carta/'); // Redirige al inicio
 };
 
 useHead({

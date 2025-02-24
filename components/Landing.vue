@@ -9,7 +9,7 @@
           Disfruta de nuestras smash burgers, hechas con ingredientes frescos y seleccionados especialmente para ti. <br />¿Estás listo para probarnos?
         </p>
         <button class="cta-button">
-          <a href="/carta">Ver Carta</a>
+          <a href="/carta/">Ver Carta</a>
         </button>
       </div>
     </div>
