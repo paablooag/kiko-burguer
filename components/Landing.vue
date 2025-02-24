@@ -4,7 +4,7 @@
       <!-- Fondo con imagen y overlay gris, animado con zoom -->
       <div class="background-image" :style="{ transform: `scale(${scrollZoom})` }"></div>
       <div class="text">
-        <h1>¡Bienvenido a Kiko Burguer!</h1>
+        <h1>¡Bienvenido a Kiko Burger!</h1>
         <p>
           Disfruta de nuestras smash burgers, hechas con ingredientes frescos y seleccionados especialmente para ti. <br />¿Estás listo para probarnos?
         </p>
