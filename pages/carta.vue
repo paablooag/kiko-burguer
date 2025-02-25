@@ -97,8 +97,6 @@
 
 <script setup>
 import { ref } from 'vue'
-// Ajusta la ruta de tu logo según tu proyecto
-import logo from '@/static/kiko-logo.png'
 
 // Controla si se muestra el menú normal (false) o los combos (true)
 const showCombos = ref(false)

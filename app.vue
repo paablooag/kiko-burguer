@@ -1,8 +1,6 @@
 <template>
   <div>
-    <!-- <Header /> -->
-    <NuxtPage />  <!-- Renderiza dinámicamente cada página -->
-    <!-- <Footer /> -->
+    <NuxtPage /> 
   </div>
 </template>
 
