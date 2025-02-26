@@ -18,7 +18,7 @@
         <nav class="footer-nav third-column">
           <ul>
             <li><a href="/">Inicio</a></li>
-            <li><a href="/carta/">Carta</a></li>
+            <li><a href="/carta">Carta</a></li>
             <!-- <li><a href="">Contacto</a></li> -->
           </ul>
         </nav>
