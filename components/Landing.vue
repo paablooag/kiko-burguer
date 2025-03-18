@@ -103,6 +103,18 @@
         </a>
       </div>
     </section>
+        <!-- Sección de Blog -->
+        <section class="blog">
+      <h2>Nuestro Blog</h2>
+      <div class="blog-container">
+        <div class="blog-item" v-for="(post, index) in blogPosts" :key="index">
+          <img :src="post.image" :alt="post.title" />
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.description }}</p>
+          <a :href="post.link" class="read-more">Leer Más</a>
+        </div>
+      </div>
+    </section>
   </section>
 </template>
 
@@ -135,6 +147,18 @@ const reviews = ref([
     author: "Nayra Alejandra Arboleda",
     rating: 5,
   },
+])
+import QuienesSomos from '/static/quienes-somos.jpg' // Ajusta la ruta según tu estructura
+// Datos de los posts del blog
+const blogPosts = ref([
+  {
+    image: QuienesSomos,
+    title: '¿Quieres conocernos?',
+    description: 'Conoce nuestra historia, nuestro equipo y nuestra passión por las hamburguesas.',
+    link: '/blog/quienes-somos'
+  },
+ 
+  
 ])
 
 // Variable reactiva para controlar el zoom del fondo
@@ -471,6 +495,68 @@ onUnmounted(() => {
   font-weight: bold;
 }
 
+/* Sección de Blog */
+.blog {
+  padding: 50px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.blog h2 {
+  font-size: 36px;
+  color: #FFD700;
+  margin-bottom: 30px;
+}
+
+.blog-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.blog-item {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 3px;
+  width: 300px;
+  text-align: left;
+}
+
+.blog-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 3px 3px 0 0;
+}
+
+.blog-item h3 {
+  font-size: 24px;
+  color: #FFD700;
+  margin: 15px 0;
+}
+
+.blog-item p {
+  font-size: 16px;
+  color: #f1f1f1;
+  margin-bottom: 15px;
+}
+
+.blog-item .read-more {
+  display: inline-block;
+  background-color: #FFD700;
+  color: #222;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.blog-item .read-more:hover {
+  background-color: #ffca00;
+}
+
 /* Media Queries para responsividad */
 @media (max-width: 768px) {
   .order-links {
@@ -502,6 +588,10 @@ onUnmounted(() => {
   .testimonial {
     width: 45%;
   }
+
+  .blog-item {
+    width: 45%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -523,6 +613,9 @@ onUnmounted(() => {
   .cta-button {
     font-size: 14px;
     padding: 8px 15px;
+  }
+  .blog-item {
+    width: 100%;
   }
 }
 </style>
