@@ -19,7 +19,7 @@
         Nuestra historia comenzó con una pasión por la comida honesta y sin complicaciones. En <strong>Kiko Burger Granada</strong>, ofrecemos las <strong>mejores smash burgers de Granada</strong>, elaboradas con carne jugosa, pan artesanal y productos seleccionados con esmero. Situados en el centro de Granada, somos el lugar perfecto para los amantes de las <strong>burgers en Granada</strong> que buscan calidad e innovación.
       </p>
       <div class="image">
-        <img src="../../static/kiko-logo2.png" alt="Hamburguesa Gourmet en Kiko Burger Granada" class="about-image" />
+        <img src="../../static/kiko-logo2.png" alt="Logo Kiko Burger Granada" class="about-image" />
       </div>
       <p>
         Más que una hamburguesería, en <strong>Kiko Undefiled Burger</strong> somos un punto de encuentro para la comunidad. Nos enorgullece ser parte de las <strong>hamburgueserías de Granada</strong> favoritas, donde cada cliente se siente como en casa. Innovamos con recetas únicas y escuchamos a nuestros clientes para seguir siendo una referencia entre las <strong>hamburguesas en Granada centro</strong>.
@@ -57,7 +57,7 @@ meta: [
   },
   { 
     property: 'og:title', 
-    content: 'Quiénes Somos | Kiko Burger Granada - Hamburguesas Gourmet' 
+    content: 'Quiénes Somos | Kiko Burger Granada - Smash Burgers' 
   },
   { 
     property: 'og:description', 
