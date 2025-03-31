@@ -3,7 +3,7 @@
   <div class="about-container">
     <div class="about-header">
       <h1 class="about-title">Nuestra Historia - Kiko Burger Granada</h1>
-      <p class="publish-date">Publicado el {{ formattedDate }}</p>
+      <p class="publish-date">Publicado el 24 de marzo de 2025</p>
     </div>
 
     <section class="about-content">
@@ -36,11 +36,6 @@
 <script setup>
 import { ref } from 'vue'
 
-const formattedDate = ref(new Date().toLocaleDateString("es-ES", {
-year: "numeric",
-month: "long",
-day: "numeric"
-}))
 
 useHead({
 title: 'Quiénes Somos | Kiko Burger Granada - Mejores Smash Burgers',
