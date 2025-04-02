@@ -13,4 +13,5 @@ export default defineNuxtConfig({
   ssr: true, // Asegúrate de que SSR está habilitado si estás usando SSR
   devtools: { enabled: true },
   compatibilityDate: '2025-02-13',
+  modules: ['nuxt-simple-sitemap'],
 })
