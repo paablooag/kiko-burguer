@@ -18,8 +18,10 @@ export default defineNuxtConfig({
 
   // 👇 Aquí es donde se debe configurar correctamente el sitemap
   runtimeConfig: {
+    public: {
     sitemap: {
       siteUrl: 'https://kikoundefiledburger.com',
     }
+  }
   }
 })
