@@ -14,16 +14,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   compatibilityDate: '2025-02-13',
 
-  modules: ['nuxt-simple-sitemap'],
+  // No necesitas modules ni sitemap, ya que el sitemap se genera manualmente
+  modules: [],
 
-  // Configuración del sitemap (evitamos siteUrl para prevenir el error de tipos)
-  sitemap: {
-    // Opciones válidas para nuxt-simple-sitemap, si las necesitas
-    exclude: [], // Ejemplo: excluir rutas específicas
-    sources: ['/', '/carta', '/blog/quienes-somos'], // Rutas explícitas
-  },
-
-  // Configuración dinámica del siteUrl
+  // Mantén runtimeConfig si lo usas en otras partes de la app
   runtimeConfig: {
     public: {
       siteUrl:
@@ -33,4 +27,4 @@ export default defineNuxtConfig({
           : 'http://localhost:3000'),
     },
   },
-})
+});
