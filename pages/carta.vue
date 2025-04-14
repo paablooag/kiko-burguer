@@ -6,7 +6,7 @@
     </div>
 
     <div class="combo-switch">
-      <span class="combo-text">{{ showCombos ? 'Ver opción sin combo' : 'Ver opción combo combo' }}</span>
+      <span class="combo-text">{{ showCombos ? 'Ver opción sin combo' : 'Ver opción combo' }}</span>
       <label class="switch">
         <input type="checkbox" v-model="showCombos" />
         <span class="slider"></span>
@@ -55,7 +55,10 @@
         <ul>
           <li v-for="burger in products.burgers" :key="burger.name">
             <div class="burger-item">
-              <h2>{{ burger.name }}</h2>
+              <h2>
+                {{ burger.name }}
+                <span v-if="burger.name.includes('Mini Burger')" class="novedad">NOVEDAD</span>
+              </h2>
               <span class="price-circle">{{ burger.price }}</span>
             </div>
             <p>{{ burger.description }}</p>
@@ -94,13 +97,11 @@
   <Footer />
 </template>
 
-
 <script setup>
 import { ref } from 'vue'
 
 // Controla si se muestra el menú normal (false) o los combos (true)
 const showCombos = ref(false)
-
 
 useHead({
   title: 'Kiko Undefiled Burger | Carta',
@@ -137,6 +138,8 @@ const products = {
     { name: "Zumo de melocotón/piña", price: "1,80€" },
   ],
   burgers: [
+    { name: "Mini Burger 6 uds.", price: "11,90€", description: "Carne, Queso Cheddar, Ketchup, Mostaza" },
+    { name: "Mini Burger 12 uds.", price: "21,90€", description: "Carne, Queso Cheddar, Ketchup, Mostaza" },
     { name: "Cheeseburger", price: "4,99€", description: "Carne 90gr, Queso Cheddar, Mostaza, Ketchup, Cebolla" },
     { name: "Double Double", price: "7,99€", description: "Carne 90gr x2, Cheddar x2" },
     { name: "Bacon Cheeseburger", price: "6,99€", description: "Carne 90gr, Cheddar, Bacon" },
@@ -201,8 +204,7 @@ const products = {
   align-items: center;
   gap: 0.5rem;
   justify-content: center;
-  margin-top: 8%
-
+  margin-top: 8%;
 }
 .switch {
   position: relative;
@@ -283,6 +285,18 @@ input:checked + .slider:before {
   margin-left: 1rem;
 }
 
+/* Estilo para la novedad */
+.novedad {
+  background-color: #FFD700;
+  color: #1d1d1d;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
 /* Estilo para la descripción del producto */
 .burgers p {
   font-size: 0.9rem;
@@ -358,7 +372,7 @@ input:checked + .slider:before {
   }
   .combo-switch {
     flex-direction: column;
-    margin-top: 20%
+    margin-top: 20%;
   }
   .drinks-container {
     flex-direction: column;
