@@ -16,12 +16,14 @@ export default defineNuxtConfig({
 
   modules: ['nuxt-simple-sitemap'],
 
-  // 👇 Aquí es donde se debe configurar correctamente el sitemap
-  runtimeConfig: {
-    public: {
+ // Configuración dinámica del sitemap
+ runtimeConfig: {
+  public: {
     sitemap: {
-      siteUrl: 'https://kikoundefiledburger.com',
-    }
-  }
-  }
+      siteUrl: process.env.NODE_ENV === 'production'
+        ? 'https://kikoundefiledburger.com'
+        : 'http://localhost:3000', // URL para desarrollo
+    },
+  },
+},
 })
