@@ -16,14 +16,21 @@ export default defineNuxtConfig({
 
   modules: ['nuxt-simple-sitemap'],
 
- // Configuración dinámica del sitemap
- runtimeConfig: {
-  public: {
-    sitemap: {
-      siteUrl: process.env.NODE_ENV === 'production'
-        ? 'https://kikoundefiledburger.com'
-        : 'http://localhost:3000', // URL para desarrollo
+  // Configuración del sitemap (evitamos siteUrl para prevenir el error de tipos)
+  sitemap: {
+    // Opciones válidas para nuxt-simple-sitemap, si las necesitas
+    exclude: [], // Ejemplo: excluir rutas específicas
+    sources: ['/', '/carta', '/blog/quienes-somos'], // Rutas explícitas
+  },
+
+  // Configuración dinámica del siteUrl
+  runtimeConfig: {
+    public: {
+      siteUrl:
+        process.env.NUXT_PUBLIC_SITE_URL ||
+        (process.env.NODE_ENV === 'production'
+          ? 'https://kikoundefiledburger.com'
+          : 'http://localhost:3000'),
     },
   },
-},
 })
