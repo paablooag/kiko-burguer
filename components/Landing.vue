@@ -104,7 +104,7 @@
       </div>
     </section>
         <!-- Sección de Blog -->
-        <section class="blog">
+    <section class="blog">
       <h2>Nuestro Blog</h2>
       <div class="blog-container">
         <div class="blog-item" v-for="(post, index) in blogPosts" :key="index">
@@ -149,6 +149,7 @@ const reviews = ref([
   },
 ])
 import QuienesSomos from '/static/quienes-somos.jpg' // Ajusta la ruta según tu estructura
+import miniBurgers from '/static/mini-burgers.jpg' // Ajusta la ruta según tu estructura
 // Datos de los posts del blog
 const blogPosts = ref([
   {
@@ -156,6 +157,12 @@ const blogPosts = ref([
     title: '¿Quieres conocernos?',
     description: 'Conoce nuestra historia, nuestro equipo y nuestra passión por las hamburguesas.',
     link: '/blog/quienes-somos'
+  },
+  {
+    image: miniBurgers,
+    title: 'Mini Burgers',
+    description: 'La opción favorita para aquellos que buscan una comida rápida, sencilla y perfecta para cualquier ocasión.',
+    link: '/blog/mini-burgers'
   },
  
   
