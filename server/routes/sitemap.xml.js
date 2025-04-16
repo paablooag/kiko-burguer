@@ -4,6 +4,7 @@ export default defineEventHandler(() => {
       '/',
       '/carta',
       '/blog/quienes-somos',
+      '/blog/mini-burgers',
       // Agrega más rutas aquí según necesites
     ];
   
