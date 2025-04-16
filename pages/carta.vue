@@ -138,8 +138,8 @@ const products = {
     { name: "Zumo de melocotón/piña", price: "1,80€" },
   ],
   burgers: [
-    { name: "Mini Burger 6 uds.", price: "11,90€", description: "Carne, Queso Cheddar, Ketchup, Mostaza" },
-    { name: "Mini Burger 12 uds.", price: "21,90€", description: "Carne, Queso Cheddar, Ketchup, Mostaza" },
+    { name: "Mini Burger 6 uds.", price: "11,90€", description: "Carne, Queso Cheddar, Ketchup" },
+    { name: "Mini Burger 12 uds.", price: "21,90€", description: "Carne, Queso Cheddar, Ketchup" },
     { name: "Cheeseburger", price: "4,99€", description: "Carne 90gr, Queso Cheddar, Mostaza, Ketchup, Cebolla" },
     { name: "Double Double", price: "7,99€", description: "Carne 90gr x2, Cheddar x2" },
     { name: "Bacon Cheeseburger", price: "6,99€", description: "Carne 90gr, Cheddar, Bacon" },
