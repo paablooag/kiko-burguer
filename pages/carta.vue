@@ -100,9 +100,12 @@
 <script setup>
 import { ref } from 'vue'
 
-// Controla si se muestra el menú normal (false) o los combos (true)
 const showCombos = ref(false)
 
+// Llamada a la API
+const { data: products, error } = await useFetch('http://localhost:5000/api/menu')
+
+// SEO
 useHead({
   title: 'Kiko Undefiled Burger | Carta',
   meta: [
@@ -111,55 +114,9 @@ useHead({
     { name: 'robots', content: 'index, follow' },
     { name: 'keywords', content: 'burger, hamburguesa, kiko, kiko burger, hamburguesas gourmet, comida rápida Granada' },
   ],
-});
-
-// Lista de productos
-const products = {
-  combos: [
-    { name: "COMBO CHEESEBURGER", price: "8,90€" },
-    { name: "COMBO DOUBLE DOUBLE", price: "11,90€" },
-    { name: "COMBO BACON CHEESEBURGER", price: "9,90€" },
-    { name: "COMBO LTC", price: "9,90€" },
-    { name: "COMBO CRISPY CHICKEN", price: "8,90€" },
-    { name: "COMBO VEGAN BURGER", price: "10,90€" },
-  ],
-  drinks: [
-    { name: "Agua 1L", price: "1,20€" },
-    { name: "Agua con gas", price: "1,40€" },
-    { name: "Aquarius", price: "1,70€" },
-    { name: "Nestea", price: "1,70€" },
-    { name: "Coca Cola", price: "1,70€" },
-    { name: "Sprite", price: "1,70€" },
-    { name: "Fanta Naranja", price: "1,70€" },
-    { name: "Fanta Limón", price: "1,70€" },
-    { name: "Cerveza Alhambra 33cl", price: "1,90€" },
-    { name: "Cerveza Sin Alcohol 33cl", price: "1,90€" },
-    { name: "Zumo de naranja", price: "2,50€" },
-    { name: "Zumo de melocotón/piña", price: "1,80€" },
-  ],
-  burgers: [
-    { name: "Mini Burger 6 uds.", price: "11,90€", description: "Carne, Queso Cheddar, Ketchup" },
-    { name: "Mini Burger 12 uds.", price: "21,90€", description: "Carne, Queso Cheddar, Ketchup" },
-    { name: "Cheeseburger", price: "4,99€", description: "Carne 90gr, Queso Cheddar, Mostaza, Ketchup, Cebolla" },
-    { name: "Double Double", price: "7,99€", description: "Carne 90gr x2, Cheddar x2" },
-    { name: "Bacon Cheeseburger", price: "6,99€", description: "Carne 90gr, Cheddar, Bacon" },
-    { name: "LTC", price: "6,99€", description: "Carne 90gr, Cheddar, Lechuga, Tomate, Cebolla, Mostaza, Ketchup" },
-    { name: "Crispy Chicken", price: "6,99€", description: "Pollo Crispy, Cheddar, Lechuga, Tomate, Mayonesa" },
-    { name: "Vegan Burger", price: "7,99€", description: "Pan Vegano, Medallón No Carne, Lechuga, Tomate, Guacamole" },
-  ],
-  sides: [
-    { name: "Patatas Fritas", price: "3,00€" },
-    { name: "Boniato Frito", price: "3,50€" },
-    { name: "Nuggets de Pollo 6u.", price: "3,99€" },
-    { name: "Nuggets de Pollo 12u.", price: "5,50€" },
-  ],
-  extras: [
-    { name: "Extra Cheddar", price: "+0,80€" },
-    { name: "Extra Bacon", price: "+0,90€" },
-    { name: "Extra Carne", price: "+1,99€" },
-  ],
-}
+})
 </script>
+
 
 <style scoped>
 @font-face {
