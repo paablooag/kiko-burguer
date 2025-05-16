@@ -106,12 +106,33 @@ const showCombos = ref(false)
 useHead({
   title: 'Kiko Undefiled Burger | Carta',
   meta: [
-    { name: 'description', content: 'Descubre la carta de las mejores smash burgers de Kiko Undefiled Burger. Con nuestra selección de hamburguesas frescas y gourmet, disfruta de una deliciosa comida rápida y una experiencia única.' },
+    {
+      name: 'description',
+      content: 'Descubre la carta de las mejores smash burgers de Kiko Undefiled Burger. Con nuestra selección de hamburguesas frescas y gourmet, disfruta de una deliciosa comida rápida y una experiencia única.',
+    },
     { name: 'author', content: 'Kiko Undefined Burger' },
     { name: 'robots', content: 'index, follow' },
-    { name: 'keywords', content: 'burger, hamburguesa, kiko, kiko burger, hamburguesas gourmet, comida rápida Granada' },
+    {
+      name: 'keywords',
+      content: 'burger, hamburguesa, kiko, kiko burger, hamburguesas gourmet, comida rápida Granada',
+    },
   ],
-});
+  script: [
+    {
+      children: `// Hotjar Tracking Code for https://localhost:3000
+(function(h,o,t,j,a,r){
+    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+    h._hjSettings={hjid:6406059,hjsv:6};
+    a=o.getElementsByTagName('head')[0];
+    r=o.createElement('script');r.async=1;
+    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    a.appendChild(r);
+})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
+      type: 'text/javascript'
+    },
+  ]
+})
+
 
 // Lista de productos
 const products = {
